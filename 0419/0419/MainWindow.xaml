@@ -6,12 +6,23 @@
         xmlns:local="clr-namespace:_0419"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <StackPanel Orientation="Vertical">
-        <TextBlock FontSize="20" Margin="1 20 20 270">身高：</TextBlock>
-        <TextBox></TextBox>
-        <TextBlock FontSize="20" Margin="1 1 20 1">體重：</TextBlock>
-        <Button Padding="5" Margin="450 1 20 200" Background="Blue" Foreground="White">清除</Button>
-        <Button Padding="5" Margin="450 1 20 30" Background="Blue" Foreground="White">清除</Button>
-        <Button Padding="10" Margin="25 1" Background="Blue" Foreground="White">計算</Button>
+
+    <StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="15 20 10 10" FontSize="20"> 身高:</TextBlock>
+            <TextBox Width="350" Height="30" Margin="20 20 10 10" x:Name="HeightBox"></TextBox>
+            <Button Width="55" Height="30" Margin="10 20 10 10" FontSize="16" x:Name="HeightClearBtn" Click="HeightClearBtn_Click">清除</Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="15 20 10 10" FontSize="20"> 體重:</TextBlock>
+            <TextBox Width="350" Height="30" Margin="20 10 10 10" x:Name="WeightBox"></TextBox>
+            <Button Width="55" Height="30" Margin="10 10 10 10" FontSize="16" x:Name="WeightClearBtn" Click="WeightClearBtn_Click">清除</Button>
+        </StackPanel>
+
+        <Button Background="Purple" Foreground="WhiteSmoke" FontSize="22"  Padding="10" Margin="50 20" x:Name="CaculateBtn" Click="CaculateBtn_Click">計算</Button>
+
+        <TextBlock TextAlignment="Center" FontSize="50" Foreground="GreenYellow" Margin="50" x:Name="ResultBox">0</TextBlock>
     </StackPanel>
 </Window>

@@ -25,5 +25,23 @@ namespace _0419
             InitializeComponent();
         }
 
+        private void HeightClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            HeightBox.Text = " ";
+            HeightBox.Background = Brushes.LightYellow;
+        }
+
+        private void CaculateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double height = double.Parse(HeightBox.Text) / 100;
+            double Re = (double.Parse(WeightBox.Text) / (height * height));
+            ResultBox.Text = Re.ToString();
+        }
+
+        private void WeightClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            WeightBox.Text = " ";
+            WeightBox.Background = Brushes.LightYellow;
+        }
     }
 }
