@@ -11,15 +11,19 @@
 
         <StackPanel Orientation="Horizontal">
             <TextBlock Margin="15 20 10 10" FontSize="20"> 身高:</TextBlock>
-            <TextBox Width="350" Height="30" Margin="20 20 10 10" x:Name="HeightBox"></TextBox>
-            <Button Width="55" Height="30" Margin="10 20 10 10" FontSize="16" x:Name="HeightClearBtn" Click="HeightClearBtn_Click">清除</Button>
+            <TextBox Width="350" Height="30" Margin="20 20 10 10" Text="0" x:Name="HeightBox"></TextBox>
+            <Button Background="CornflowerBlue" Foreground="WhiteSmoke" Width="55" Height="30" Margin="10 20 10 10" FontSize="16" x:Name="HeightClearBtn" Click="HeightClearBtn_Click">清除</Button>
         </StackPanel>
 
+        <Slider Minimum="0" Maximum="200" Margin="15 5 10 15" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="False" x:Name="HeightBar" ValueChanged="HeightBar_ValueChanged"></Slider>
+        
         <StackPanel Orientation="Horizontal">
             <TextBlock Margin="15 20 10 10" FontSize="20"> 體重:</TextBlock>
-            <TextBox Width="350" Height="30" Margin="20 10 10 10" x:Name="WeightBox"></TextBox>
-            <Button Width="55" Height="30" Margin="10 10 10 10" FontSize="16" x:Name="WeightClearBtn" Click="WeightClearBtn_Click">清除</Button>
+            <TextBox Width="350" Height="30" Margin="20 10 10 10" Text="0" x:Name="WeightBox"></TextBox>
+            <Button Background="CornflowerBlue" Foreground="WhiteSmoke" Width="55" Height="30" Margin="10 10 10 10" FontSize="16" x:Name="WeightClearBtn" Click="WeightClearBtn_Click">清除</Button>
         </StackPanel>
+
+        <Slider Minimum="0" Maximum="200" Margin="15 5 10 15" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="False" x:Name="WeightBar" ValueChanged="WeightBar_ValueChanged"></Slider>
 
         <Button Background="Purple" Foreground="WhiteSmoke" FontSize="22"  Padding="10" Margin="50 20" x:Name="CaculateBtn" Click="CaculateBtn_Click">計算</Button>
 

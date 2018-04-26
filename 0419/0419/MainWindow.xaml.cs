@@ -36,12 +36,32 @@ namespace _0419
             double height = double.Parse(HeightBox.Text) / 100;
             double Re = (double.Parse(WeightBox.Text) / (height * height));
             ResultBox.Text = Re.ToString();
+
+
         }
 
         private void WeightClearBtn_Click(object sender, RoutedEventArgs e)
         {
             WeightBox.Text = " ";
             WeightBox.Background = Brushes.LightYellow;
+        }
+
+        private void HeightBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            HeightBox.Text = HeightBar.Value.ToString();
+
+            double height = double.Parse(HeightBox.Text) / 100;
+            double Re = (double.Parse(WeightBox.Text) / (height * height));
+            ResultBox.Text = Re.ToString();
+        }
+
+        private void WeightBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            WeightBox.Text = WeightBar.Value.ToString();
+
+            double height = double.Parse(HeightBox.Text) / 100;
+            double Re = (double.Parse(WeightBox.Text) / (height * height));
+            ResultBox.Text = Re.ToString();
         }
     }
 }
